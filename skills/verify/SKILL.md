@@ -69,6 +69,8 @@ auth state once and settle everything for that page in one pass.
 5. **Security lint.** Static pass over registrations:
    - `readOnlyHint` true only for tools with no state change
    - `untrustedContentHint` true wherever returns carry UGC
+   - `consequentialHint` true on booking, payment, sending and other
+     irreversible tools
    - no agent instructions, secrets, or URLs-to-elsewhere in names,
      titles, or descriptions
    - destructive/payment tools stop at a reversible boundary and

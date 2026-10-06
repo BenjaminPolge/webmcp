@@ -137,7 +137,8 @@ Non-negotiables for imperative tools (full contract in
    (`unregisterTool()` does not exist)
 3. Honor `execute`'s `{ signal }` in fetches and long work
 4. `annotations.readOnlyHint` must match reality;
-   `untrustedContentHint: true` when returns carry user or third-party text
+   `untrustedContentHint: true` when returns carry user or third-party text;
+   `consequentialHint: true` for significant or irreversible actions
 5. Validate input inside `execute`; fail by **returning**
    `{ error: "actionable message" }`, never by throwing — the spec maps a
    rejected `execute` to a bare `UnknownError` and discards the message.
